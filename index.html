@@ -82,6 +82,14 @@
   footer{margin-top:26px;font-size:12px;color:var(--gray);line-height:1.6}
   footer .reset{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--orange);background:none;border:1px solid var(--orange);border-radius:8px;padding:7px 14px;cursor:pointer;font-family:inherit}
   footer .reset:hover{background:var(--orange);color:#fff}
+
+  .method{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .method h3{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--gray);font-weight:800;margin-bottom:14px}
+  .method .mcols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:680px){.method .mcols{grid-template-columns:1fr;gap:14px}}
+  .method h4{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:6px}
+  .method p{font-size:13px;color:var(--ink-soft);margin-bottom:8px}
+  .method .robust{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--ink);font-weight:600}
 </style>
 </head>
 <body>
@@ -207,8 +215,24 @@
     </div>
   </div>
 
+  <section class="method">
+    <h3>How we got these numbers</h3>
+    <div class="mcols">
+      <div>
+        <h4>The human side</h4>
+        <p>Start with base salary, then add the costs that ride on top of it. Our defaults assume about 25% of salary for health and benefits (13%), the 401(k) match (4%), and payroll taxes for FICA, FUTA, and SUTA (8%), plus a flat $5,000 a year for paid time off, equipment, and recruiting. A $100,000 salary lands near $130,000 fully loaded. These percentages vary by company, so every field is editable.</p>
+      </div>
+      <div>
+        <h4>The agent side</h4>
+        <p>An agent has no benefits, taxes, or time off. It costs tokens and software. Our $7,300 a year default, about $20 a day, breaks down as roughly $150 a month in AI tokens, $250 a month in software and subscriptions, $50 a month in compute and hosting, and $1,900 a year for periodic tuning.</p>
+        <p>On the token line: a busy agent handling around 15 substantive tasks a day, on a mid-tier model with prompt caching, runs near $150 a month at published API rates. Run the same work on a flat-rate subscription and the token line moves into software instead. Either way the all-in number stays in the low thousands.</p>
+      </div>
+    </div>
+    <p class="robust">The exact token figure is not the point. Even if every agent cost were double or triple our estimate, an agent still runs many times cheaper than a fully loaded hire. The gap is wide enough that the precise inputs do not change the conclusion.</p>
+  </section>
+
   <footer>
-    <p>Figures are illustrative and fully editable. Default human burden assumes roughly 25% on top of salary for benefits, match, and payroll taxes, plus a flat allowance for time off, equipment, and recruiting. Default agent costs reflect a typical single-agent setup of tokens, software, and hosting. Replace every field with your own numbers.</p>
+    <p><b>Disclaimer.</b> These figures are illustrative and meant for modeling, not a price quote or a guarantee of savings. Real costs vary by role, region, company, model choice, and usage. The goal is augmentation, not replacement: the strongest return comes from giving your existing team agents so each person produces more, not from cutting headcount. Replace every field with your own numbers, and validate against your own payroll and vendor invoices before making decisions.</p>
     <button class="reset" onclick="resetDefaults()">Reset to defaults</button>
     <p style="margin-top:14px">Cirrius Solutions. Borrow the expertise, build the asset.</p>
   </footer>
