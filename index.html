@@ -147,7 +147,7 @@
 
       <div class="row">
         <label>AI tokens / API usage (per month)</label>
-        <div class="ifield"><span class="pre">$</span><input id="tokens" type="number" value="150" min="0" step="10"></div>
+        <div class="ifield"><span class="pre">$</span><input id="tokens" type="number" value="650" min="0" step="10"></div>
       </div>
       <div class="row">
         <label>Software &amp; subscriptions (per month)</label>
@@ -159,7 +159,7 @@
       </div>
       <div class="row">
         <label>Skill development &amp; tuning (per year)</label>
-        <div class="ifield"><span class="pre">$</span><input id="skilldev" type="number" value="1900" min="0" step="100"></div>
+        <div class="ifield"><span class="pre">$</span><input id="skilldev" type="number" value="1650" min="0" step="100"></div>
       </div>
       <div class="row">
         <label>No benefits, taxes, time off, or turnover</label>
@@ -224,8 +224,8 @@
       </div>
       <div>
         <h4>The agent side</h4>
-        <p>An agent has no benefits, taxes, or time off. It costs tokens and software. Our $7,300 a year default, about $20 a day, breaks down as roughly $150 a month in AI tokens, $250 a month in software and subscriptions, $50 a month in compute and hosting, and $1,900 a year for periodic tuning.</p>
-        <p>On the token line: a busy agent handling around 15 substantive tasks a day, on a mid-tier model with prompt caching, runs near $150 a month at published API rates. Run the same work on a flat-rate subscription and the token line moves into software instead. Either way the all-in number stays in the low thousands.</p>
+        <p>An agent has no benefits, taxes, or time off. It costs tokens and software. Our $13,050 a year default, about $36 a day, breaks down as roughly $650 a month in AI tokens, $250 a month in software and subscriptions, $50 a month in compute and hosting, and $1,650 a year for periodic tuning.</p>
+        <p>On the token line: an agent workforce carrying the volume of two or three people, on mid-tier models with prompt caching, runs near $650 a month at published API rates. Run the same work on flat-rate subscriptions and the token line moves into software instead. Either way the all-in number stays a small fraction of a fully loaded hire.</p>
       </div>
     </div>
     <p class="robust">The exact token figure is not the point. Even if every agent cost were double or triple our estimate, an agent still runs many times cheaper than a fully loaded hire. The gap is wide enough that the precise inputs do not change the conclusion.</p>
@@ -240,7 +240,7 @@
 </div>
 
 <script>
-  var DEFAULTS={salary:100000,benefits:13,match:4,tax:8,pto:5000,tokens:150,software:250,hosting:50,skilldev:1900,mult:2};
+  var DEFAULTS={salary:100000,benefits:13,match:4,tax:8,pto:5000,tokens:650,software:250,hosting:50,skilldev:1650,mult:2};
   var ids=Object.keys(DEFAULTS);
   function num(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?0:v;}
   function money(n){return '$'+Math.round(n).toLocaleString('en-US');}
